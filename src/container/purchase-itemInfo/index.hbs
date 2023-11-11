@@ -1,0 +1,88 @@
+<main class='main'>
+
+  <div class='main_card'>
+
+        {{> purchase-heading title="Інформація про замовлення"}}
+
+        {{#with data}}
+          <form method='POST' action='/purchase-itemInfo?id={{id}}' class='form-card'>
+
+            <div class="item">ID: {{id}}</div>
+            
+            {{> divider}}
+
+            <div class="item">
+              <div class="item__block"><span class="item__name">Ім'я: </span><span class="item__part"></span>{{firstname}}</div>
+              <div class="item__block"><span class="item__name">Прізвище: </span> <span class="item__part">{{lastname}}</span></div>
+              <div class="item__block"><span class="item__name">Телефон: </span><span class="item__part">{{phone}}</span></div>
+              <div class="item__block"><span class="item__name">Електронна пошта: </span><span class="item__part">{{email}}</span></div>
+            </div>
+
+            {{> divider}}
+
+            <div class="item">
+              <div class="item__block"><span class="item__name">Назва товару: </span><span class="item__part">{{product}}</span></div>
+              <div class="item__block"><span class="item__name">Кількість: </span><span class="item__part">{{amount}}</span></div>
+            </div> 
+
+            <div class="item"><span class="item__name">Коментар: </span><span class="item__part">{{comment}}</span></div>
+            
+            {{> divider}}
+
+            <div class="item">
+              <div class="item__block"><span class="item__name">Вартість товарів: </span><span class="item__part">{{purchasePrice}}</span></div>
+              <div class="item__block"><span class="item__name">Вартість доставки: </span><span class="item__part">{{deliveryPrice}}</span></div>
+              <div class="item__block"><span class="item__name">Сума до сплати: </span><span class="item__part">{{totalPrice}}</span></div>
+              <div class="item__block"><span class="item__name">Нараховані бонуси: </span><span class="item__part">{{bonus}}</span></div>
+            </div>
+
+            {{> divider}}
+
+          </form>
+        {{/with}}
+
+        <a href="/purchase-update?id={{data.id}}" class="button">
+          Змінити дані
+        </a>
+
+      </div>
+
+  {{!-- <div class='main_card'>
+
+    {{> purchase-heading title="Інформація про замовлення"}}
+
+    {{#with data}}
+      <form method='POST' action='/purchase-itemInfo?id={{id}}' class='form-card'>
+
+        ID: {{id}}
+        {{> divider}}
+
+        <div class="item">
+          {{> purchase-item4 label1="Ім'я: " label2="Прізвище: " label3="Телефон: " label4="Електронна пошта: " text1=firstname text2=lastname text3=phone text4=email}}
+        </div>
+
+        {{> divider}}
+
+        <div class="item">
+          {{> purchase-item2 label1="Назва товару: " label2="Кількість: " text1=product text2=amount}}
+          {{> purchase-item1 label="Коментар: " text=comment}}
+        </div> 
+        
+        {{> divider}}
+
+        <div class="item">
+          {{> purchase-item4 label1="Вартість товарів: " label2="Вартість доставки: " label3="Сума до сплати: " label4="Нараховані бонуси: " text1=purchasePrice text2=deliveryPrice text3=totalPrice text4=bonus}}
+        </div>
+
+        {{> divider}}
+
+      </form>
+    {{/with}}
+
+    <a href="/purchase-update?id={{data.id}}" class="button">
+      Змінити дані
+    </a>
+
+  </div> --}}
+
+</main>

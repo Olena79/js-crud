@@ -11,7 +11,11 @@
     {{#each category}}
       <span
         class='product-card__category product-card__category--{{id}}'
-      >{{text}}</span>
+      >{{text}}
+        <img
+          src='{{svg}}'
+          class='product-card__category-svg'
+        /></span>
     {{/each}}
     <a
       href='/purchase-product?id={{id}}'

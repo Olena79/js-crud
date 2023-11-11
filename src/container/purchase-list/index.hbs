@@ -1,0 +1,46 @@
+<main class='main'>
+  {{> purchase-heading title="Мої замовлення"}}
+
+  <div class='product-list'>
+
+    {{#each data.list}}
+      <form method='POST' action='/purchase-itemInfo?id={{id}}'>
+
+        <div class="product-info">
+          <div class="product-info__details">
+            <p class="product-info__title">ID: {{id}}</p>
+          </div>
+
+          <div class="product-info__details">
+            <p class='product-info__title'>Назва товару</p> 
+            <p class='product-info__discription'>{{product}}</p>
+          </div>
+
+          <div class="product-info__details">
+            <p class='product-info__title'>Сума замовлення</p>
+            <p class='product-info__discription'>{{totalPrice}}</p>
+          </div>
+
+          <div class="product-info__details">
+            <p class='product-info__title'>Нараховані бонуси</p> 
+            <p class='product-info__discription'>{{bonus}}</p>
+          </div>
+
+          <div class="product-info__details">
+            {{> button text="Інформація про замовлення"}}
+          </div>       
+
+        </div>
+
+        {{> divider}}
+
+      </form>
+    {{/each}}
+    
+  </div>
+  
+  <a href="/" class="product-list__link">
+    {{> button text="Повернутися до покупок"}}
+  </a>
+  
+</main>
