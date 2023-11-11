@@ -1,0 +1,73 @@
+@use '../../lib/service.scss' as s;
+
+@use '../../component/purchase-heading/style.scss' as purchase-heading;
+@use '../../component/purchase-product/style.scss' as purchaseProduct;
+@use '../../component/divider/style.scss' as divider;
+@use '../../component/field/style.scss' as field;
+@use '../../component/button/style.scss' as button;
+@use '../../component/purchase-item1/style.scss' as purchase-item1;
+@use '../../component/purchase-item2/style.scss' as purchase-item2;
+@use '../../component/purchase-item4/style.scss' as purchase-item4;
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.main_card {
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+    margin: 20px;
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 12px;
+}
+
+.item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: s.space(5);
+    align-items: start;
+    align-content: space-between;
+    justify-content: baseline;
+    padding-bottom: 8px;
+    padding-top: 8px;
+
+    &__block {
+        color: black;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    &__name {
+        font-size: 12px;
+        color: grey;
+    }
+
+    &__part {
+        font-size: 18px;
+        color: rgb(47, 36, 36);
+    }
+}
+
+.button {
+    background-color: rgb(38, 116, 62);
+    color: white;
+    border: 3px solid grey;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+
+    &:hover {
+        opacity: 0.7;
+    }
+}

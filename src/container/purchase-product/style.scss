@@ -6,11 +6,24 @@
 @use '../../component/field/style.scss' as field;
 @use '../../component/button/style.scss' as button;
 
-main {
+.main {
     display: flex;
-    flex-direction: column;
-    gap: s.space(10);
-    padding: s.space(10);
+    justify-content: center;
+    padding: s.space(6) s.space(2);
+
+    background-color: rgb(211, 245, 235);
+    color: s.color(light);
+
+    height: fit-content;
+    min-height: 100%;
+
+    &__content {
+        width: 100%;
+        max-width: 600px;
+        display: flex;
+        flex-direction: column;
+        gap: s.space(15);
+    }
 }
 
 .product-info {
@@ -27,6 +40,7 @@ main {
     &__title {
         font-size: 20px;
         font-weight: bold;
+        color: rgb(69, 68, 68);
     }
 
     &__subtitle {
@@ -43,17 +57,17 @@ main {
     }
 
     &__category--1 {
-        border-color: blue;
-        color: blue;
+        border-color: rgb(255, 102, 0);
+        color: rgb(255, 102, 0);
     }
 
     &__category--2 {
-        border-color: green;
-        color: green;
+        border-color: rgb(38, 116, 62);
+        color: rgb(38, 116, 62);
     }
 
     &__button {
-        background-color: blue;
+        background-color: rgb(38, 116, 62);
         color: white;
         border: none;
         border-radius: 5px;
